@@ -10,7 +10,7 @@ b = ones(3)
 ### votre code ici
 # x = ...
 ###
-
+aaaaa
 # vérification
 # si besoin installer le module Test avec:
 # ]add Test 
