@@ -8,9 +8,7 @@ b = ones(3)
 # 1) résoudre Ax = b 
 
 ### votre code ici
-# x = ...
-###
-aaaaa
+x = A\b
 # vérification
 # si besoin installer le module Test avec:
 # ]add Test 
