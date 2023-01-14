@@ -1,18 +1,16 @@
 using LinearAlgebra
 
-A = [1.0 2.0 3.0;
-    2.0 -5.0 3.0
-    3.0 3.5 -4.0]
-b = ones(3)
+A = rand(100,100) # création de la matrice A
+b = rand(100) #création du vecteur B
 
 # 1) résoudre Ax = b 
 
-### votre code ici
-# x = ...
-###
 
+### votre code ici
+x=A\b
+r=A*x-b
+display(norm(r))
+###
 # vérification
-# si besoin installer le module Test avec:
-# ]add Test 
 using Test
-@test norm(A * x - b) ≤ sqrt(eps())
+@test norm(r)/norm(x) ≤ cond(A)*norm(A*r)/norm(b)
