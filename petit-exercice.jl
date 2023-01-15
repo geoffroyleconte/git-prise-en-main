@@ -9,7 +9,7 @@ b = rand(100) #création du vecteur B
 ### votre code ici
 x=A\b
 r=A*x-b
-display(norm(r))
+
 ###
 # vérification
 using Test
