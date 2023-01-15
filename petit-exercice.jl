@@ -8,7 +8,7 @@ b = ones(3)
 # 1) résoudre Ax = b 
 
 ### votre code ici
-# x = ...
+x = A \ b
 ###
 
 # vérification
