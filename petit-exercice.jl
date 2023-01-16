@@ -1,18 +1,18 @@
 using LinearAlgebra
 
-A = [1.0 2.0 3.0;
-    2.0 -5.0 3.0
-    3.0 3.5 -4.0]
-b = ones(3)
+# 1 resolution systeme
+using LinearAlgebra
+A = rand(100,100)
+b = rand(Int64,(100,1))
+x =inv(A)*b
 
-# 1) résoudre Ax = b 
+# 2 Calcul de r,Ar, cond(A)
+r =(A*x)-b
+erreur=A*r
+conditionnement=cond(A)
 
-### votre code ici
-# x = ...
-###
-
-# vérification
-# si besoin installer le module Test avec:
-# ]add Test 
+# 3 verifier condition
+norme1=norm(r)/norm(x)
+norme2=norm(A*r)/norm(b)
 using Test
-@test norm(A * x - b) ≤ sqrt(eps())
+ @test norme1<=conditionnement*norme2
