@@ -9,7 +9,8 @@ b = rand(100) #création du vecteur B
 ### votre code ici
 x=A\b
 r=A*x-b
-
+Ar=A*r
+cond(A)
 ###
 # vérification
 using Test
