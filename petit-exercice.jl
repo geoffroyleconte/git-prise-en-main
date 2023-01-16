@@ -8,8 +8,14 @@ b = ones(3)
 # 1) résoudre Ax = b 
 
 ### votre code ici
-# x = ...
-###
+# given Ax=b , PA=LU
+#LUx=Pb
+#Ly=Pb
+#Ux=y
+using LinearAlgebra
+L,U,p = lu(A);
+luA = lu(A);          
+x = luA\F;
 
 # vérification
 # si besoin installer le module Test avec:
