@@ -10,8 +10,8 @@ b = rand(100) #création du vecteur B
 x=A\b
 r=A*x-b
 Ar=A*r
-cond(A)
+c=cond(A)
 ###
 # vérification
 using Test
-@test norm(r)/norm(x) ≤ cond(A)*norm(A*r)/norm(b)
+@test norm(r)/norm(x) ≤ c*norm(Ar)/norm(b)
