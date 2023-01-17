@@ -16,3 +16,6 @@ b = ones(3)
 # ]add Test 
 using Test
 @test norm(A * x - b) ≤ sqrt(eps())
+
+    # Voici la modification de mon fichier julia
+    # Signé: Jean-Philippe
